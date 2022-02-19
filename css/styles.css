@@ -116,13 +116,22 @@ img{
 
 /* Hero */
 .hero-section{
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    margin: 0px auto;
+
     background-color: var(--second-bg-color);
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
 }
 .hero-title{
-    margin-bottom: 30px;
+    margin-bottom: 0px auto 30px auto;
+    max-width: 696px;
 
     color: var(--white-text-color);
     font-weight: 900;
@@ -195,6 +204,9 @@ img{
 
  /* Team */
 .team.section{
+    max-width: 1600px;
+    margin: 0px auto;
+
     background-color: #F5F4FA;
  }
 .team-item{
@@ -231,8 +243,11 @@ img{
     color: var(--blue-color);
 }
  .section-foot{
+    max-width: 1600px;
+    margin: 0px auto;
     padding-top: 60px;
     padding-bottom: 60px;
+
     background-color: var(--second-bg-color);
  }
  .part-logo{
