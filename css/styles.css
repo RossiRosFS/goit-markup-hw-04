@@ -7,7 +7,8 @@
     --blue-color: #2196F3;  
     --more-blue-color: #188CE8;
     --bg-color-filters:#F5F4FA;
-    --location-color:rgba(255, 255, 255, 0.6)
+    --location-color:rgba(255, 255, 255, 0.6);
+    --icon-fill-color: rgba(175, 177, 184, 1);
 }
 
 .list{
@@ -56,7 +57,6 @@ img{
 .site-head{
     border-bottom: 1px solid #ECECEC;
 }
-
 .logo{
     display: block;
     color: var(--blue-color);
@@ -80,6 +80,10 @@ img{
 .header-link:focus{
     color: var(--blue-color);
 }
+.header-link:hover .icon-cont{
+    fill: var(--blue-color);
+}
+/* Navigation */
 .site-nav{
     display: flex;
     color: var(--second-text-color);
@@ -101,6 +105,18 @@ img{
     display: flex;
     margin-left: auto;
     align-items: center;
+}
+.item-cont .item-cont-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-cont{
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+
+    fill: var(--main-text-color);
 }
 .item-cont:first-child{
     margin-right: 50px;
@@ -130,7 +146,7 @@ img{
     padding-bottom: 200px;
 }
 .hero-title{
-    margin-bottom: 0px auto 30px auto;
+    margin: 0px auto 30px auto;
     max-width: 696px;
 
     color: var(--white-text-color);
@@ -185,6 +201,18 @@ img{
     line-height: 1.14;
     text-transform: uppercase;
 }
+/* Soft-icon */
+.soft-icon-box{
+    display: flex;
+    width: 270px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px ;
+
+    background-color: #F5F4FA;
+    border-radius: 4px;
+}
 
  /* Doing */
 .doing.section{
@@ -212,6 +240,9 @@ img{
 .team-item{
     flex-basis: calc(100% / 4 - 30px);
     background-color: var(--main-bg-color);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
  .team-name, .team-text{
     font-size: 16px;
@@ -225,15 +256,83 @@ img{
  }
 .team-box{
     padding-top: 30px;
+}
+.social-box{
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 16px;
     padding-bottom: 30px;
+}
+.social-list{
+    display: flex;
+}
+.social-list-link{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 50%;
+}
+.social-list-team{
+    justify-content: space-between;
+}
+.social-list-icon{
+    align-items: center;
+    justify-content: center;    
+}
+.team-link{
+    background-color: var(--main-bg-color);
+}
+.team-icon{
+    fill: var(--main-text-color);
+}
+.social-list-link:hover,
+.social-list-link:focus{
+    background-color: var(--blue-color);
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon{
+    fill: var(--white-text-color);
+}
+/* Regular-clients-list */
+.regular-clients-list{
+    display: flex;
+}
+.regular-clients-link{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 16px 32px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+     
+}
+.regular-clients-item{
+    max-width: 170px;
+}
+.regular-clients-item:not(:last-child){
+    margin-right: 30px;
+}
+.regular-clients-icon{
+    fill: var(--icon-fill-color);
+}
+.regular-clients-link:hover,
+.regular-clients-link:focus{
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+}
+.regular-clients-link:hover .regular-clients-icon,
+.regular-clients-link:focus .regular-clients-icon{
+    fill: var(--blue-color);
 }
 
 /* Footer */
-.address-part{
-    font-style: inherit;
-}
  .address-link{
     color: var(--white-text-color);
+
+    font-style: normal;
  }
  .address-link[target="_blank"]{
    color: var(--location-color);  
@@ -259,6 +358,32 @@ img{
  }
  .address .item:not(:last-child){
     margin-bottom: 9px;
+ }
+
+ .footer-list{
+     display: flex;
+ }
+ .footer-item:not(:last-child){
+     margin-right: 70px;
+ }
+ .social-title{
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    padding-top: 12px;
+
+    color: var(--white-text-color);
+    text-transform: uppercase;
+ }
+ .celler-link{
+    background-color: rgba(255, 255, 255, 0.1);
+ }
+ .celler-icon{
+     fill: var(--white-text-color);
+ }
+ .social-item:not(:last-child){
+     margin-right: 10px;
  }
 
  /* Portfolio */
@@ -306,6 +431,10 @@ img{
 
 .project-item{
     flex-basis: calc(100% / 3 - 30px);
+}
+.project-item:hover,
+.project-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-box{
