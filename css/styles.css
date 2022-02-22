@@ -80,7 +80,8 @@ img{
 .header-link:focus{
     color: var(--blue-color);
 }
-.header-link:hover .icon-cont{
+.header-link:hover .icon-cont,
+.header-link:focus .icon-cont{
     fill: var(--blue-color);
 }
 /* Navigation */
@@ -113,10 +114,8 @@ img{
 }
 .icon-cont{
     margin-right: 10px;
-    align-items: center;
-    justify-content: center;
 
-    fill: var(--main-text-color);
+    fill: currentColor;
 }
 .item-cont:first-child{
     margin-right: 50px;
@@ -204,7 +203,6 @@ img{
 /* Soft-icon */
 .soft-icon-box{
     display: flex;
-    width: 270px;
     height: 120px;
     align-items: center;
     justify-content: center;
@@ -249,20 +247,18 @@ img{
     line-height: 1.19;
     text-align: center;
  }
+ .team-text{
+    margin-bottom: 16px;
+ }
  .team-name{
     margin-bottom: 10px;
     color: var(--second-text-color);
     font-weight: 500;
  }
 .team-box{
-    padding-top: 30px;
+    padding: 30px 32px;
 }
-.social-box{
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 16px;
-    padding-bottom: 30px;
-}
+
 .social-list{
     display: flex;
 }
@@ -274,9 +270,6 @@ img{
     justify-content: center;
     
     border-radius: 50%;
-}
-.social-list-team{
-    justify-content: space-between;
 }
 .social-list-icon{
     align-items: center;
@@ -297,24 +290,22 @@ img{
     fill: var(--white-text-color);
 }
 /* Regular-clients-list */
-.regular-clients-list{
-    display: flex;
-}
+
 .regular-clients-link{
     display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center; 
-    padding: 16px 32px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
      
 }
 .regular-clients-item{
-    max-width: 170px;
+    height: 92px;
+    flex-basis: calc(100% / 6 - 30px);
 }
-.regular-clients-item:not(:last-child){
-    margin-right: 30px;
-}
+
 .regular-clients-icon{
     fill: var(--icon-fill-color);
 }
@@ -361,7 +352,8 @@ img{
  }
 
  .footer-list{
-     display: flex;
+    display: flex;
+    align-items: baseline;
  }
  .footer-item:not(:last-child){
      margin-right: 70px;
@@ -371,7 +363,6 @@ img{
     line-height: 1.14;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
-    padding-top: 12px;
 
     color: var(--white-text-color);
     text-transform: uppercase;
@@ -432,9 +423,14 @@ img{
 .project-item{
     flex-basis: calc(100% / 3 - 30px);
 }
-.project-item:hover,
-.project-item:focus{
+.project-link{
+    display: flex;
+    flex-direction: column;
+}
+.project-link:hover, 
+.project-link:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
 
 .project-box{
